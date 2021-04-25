@@ -13,7 +13,6 @@ h1, h2, h3, h4, h5, h6 {
 </style>
 <body>
 
-<!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
     <a href="#home" class="w3-bar-item w3-button">Community Fridge</a>
