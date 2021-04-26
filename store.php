@@ -40,12 +40,14 @@ h1, h2, h3, h4, h5, h6 {
     <div class="w3-col m6 w3-padding-large w3-hide-small">
      <img src="images/vegetables.jpg" class="w3-round w3-image w3-opacity-min" alt="Fridge" width="600" height="750">
     </div>
+    <form method="POST" action="selection.php">
+      <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center">Vegetable Package</h1><br>
+        <button class="button-design" type="submit">ORDER</button>  
+        <p class="w3-large"> Donec in vestibulum diam, vitae feugiat urna. Aliquam justo diam, egestas in sodales quis, elementum nec lacus. Pellentesque a venenatis libero. Vivamus eget dignissim purus. Suspendisse convallis neque purus, vel venenatis massa accumsan sit amet. Nunc facilisis, diam sed suscipit blandit, sapien ipsum tincidunt odio, non mollis sapien nunc at ligula. Morbi rhoncus risus id lectus ornare, ut tincidunt nulla pharetra. Ut placerat diam a pharetra sollicitudin.</p>
+      </div>
+    </form>
 
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">Vegetable Package</h1><br>
-      <button class="button-design" type="submit">ORDER</button>
-      <p class="w3-large"> Donec in vestibulum diam, vitae feugiat urna. Aliquam justo diam, egestas in sodales quis, elementum nec lacus. Pellentesque a venenatis libero. Vivamus eget dignissim purus. Suspendisse convallis neque purus, vel venenatis massa accumsan sit amet. Nunc facilisis, diam sed suscipit blandit, sapien ipsum tincidunt odio, non mollis sapien nunc at ligula. Morbi rhoncus risus id lectus ornare, ut tincidunt nulla pharetra. Ut placerat diam a pharetra sollicitudin.</p>
-    </div>
   </div>
   
   <hr>
@@ -55,11 +57,13 @@ h1, h2, h3, h4, h5, h6 {
      <img src="images/ambient.jpg" class="w3-round w3-image w3-opacity-min" alt="Fridge" width="600" height="750">
     </div>
 
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">Ambient Food Package</h1><br>
-      <button class="button-design" type="submit">ORDER</button>
-      <p class="w3-large"> Donec in vestibulum diam, vitae feugiat urna. Aliquam justo diam, egestas in sodales quis, elementum nec lacus. Pellentesque a venenatis libero. Vivamus eget dignissim purus. Suspendisse convallis neque purus, vel venenatis massa accumsan sit amet. Nunc facilisis, diam sed suscipit blandit, sapien ipsum tincidunt odio, non mollis sapien nunc at ligula. Morbi rhoncus risus id lectus ornare, ut tincidunt nulla pharetra. Ut placerat diam a pharetra sollicitudin.</p>
-    </div>
+    <form method="POST" action="selection.php">
+      <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center">Ambient Food Package</h1><br>
+        <button class="button-design" type="submit">ORDER</button>
+        <p class="w3-large"> Donec in vestibulum diam, vitae feugiat urna. Aliquam justo diam, egestas in sodales quis, elementum nec lacus. Pellentesque a venenatis libero. Vivamus eget dignissim purus. Suspendisse convallis neque purus, vel venenatis massa accumsan sit amet. Nunc facilisis, diam sed suscipit blandit, sapien ipsum tincidunt odio, non mollis sapien nunc at ligula. Morbi rhoncus risus id lectus ornare, ut tincidunt nulla pharetra. Ut placerat diam a pharetra sollicitudin.</p>
+      </div>
+    </form>
   </div>
 
   <hr>
@@ -68,12 +72,13 @@ h1, h2, h3, h4, h5, h6 {
     <div class="w3-col m6 w3-padding-large w3-hide-small">
      <img src="images/household.jpg" class="w3-round w3-image w3-opacity-min" alt="Fridge" width="600" height="750">
     </div>
-
-    <div class="w3-col m6 w3-padding-large">
-      <h1 class="w3-center">Household Item Package</h1><br>
-      <button class="button-design" type="submit">ORDER</button>
-      <p class="w3-large"> Donec in vestibulum diam, vitae feugiat urna. Aliquam justo diam, egestas in sodales quis, elementum nec lacus. Pellentesque a venenatis libero. Vivamus eget dignissim purus. Suspendisse convallis neque purus, vel venenatis massa accumsan sit amet. Nunc facilisis, diam sed suscipit blandit, sapien ipsum tincidunt odio, non mollis sapien nunc at ligula. Morbi rhoncus risus id lectus ornare, ut tincidunt nulla pharetra. Ut placerat diam a pharetra sollicitudin.</p>
-    </div>
+    <form method="POST" action="selection.php">
+      <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center">Household Item Package</h1><br>
+        <button class="button-design" type="submit">ORDER</button>
+        <p class="w3-large"> Donec in vestibulum diam, vitae feugiat urna. Aliquam justo diam, egestas in sodales quis, elementum nec lacus. Pellentesque a venenatis libero. Vivamus eget dignissim purus. Suspendisse convallis neque purus, vel venenatis massa accumsan sit amet. Nunc facilisis, diam sed suscipit blandit, sapien ipsum tincidunt odio, non mollis sapien nunc at ligula. Morbi rhoncus risus id lectus ornare, ut tincidunt nulla pharetra. Ut placerat diam a pharetra sollicitudin.</p>
+      </div>
+     </form> 
   </div>
   
 <!-- End page content -->
