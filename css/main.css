@@ -1,8 +1,72 @@
-.button-design{
-    background-color: #ffffff;
-    border: none;
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+      background-color: #ffffff;
     color: black;
-    padding: 5px 32px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    border: 2px solid #555555;
+  }
+  
+  input[type=submit]:hover {
+      background-color: #555555;
+      color: white;
+  }
+  
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .button-design {
+    background-color: #b0b4b0; /* Green */
+    border: none;
+    color: Black;
+    padding: 8px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -10,10 +74,18 @@
     margin: 0px 200px;
     transition-duration: 0.4s;
     cursor: pointer;
-    border: 2px solid #555555;
-}
+    
+  }
 
-.button-design:hover {
+  .button-design:hover {
     background-color: #555555;
     color: white;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
   }
