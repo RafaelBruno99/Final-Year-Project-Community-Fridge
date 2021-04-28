@@ -133,7 +133,7 @@
                 echo "<tr><td>".$row["id"]."</td>";
                 echo "<td>".$row["pname"]."</td>";
                 echo "<td>".$row["quantity"]."</td>";
-                echo "<td><img src='images/".$row["image"]."' width= height="800"</td>";
+                echo "<td><img src='images/".$row["image"]."' width='200' length='300'</td>";
                 echo "<td>".$row["packages"]."</td></tr>";
               }
           ?>
