@@ -22,7 +22,7 @@
 <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
   <img class="w3-image" src="images/high-wycombe-banner.jpg" alt="High Wycombe" width="1600" height="800">
   <div class="w3-display-bottomleft w3-padding-large w3-opacity">
-    <h1 class="w3-xxlarge">Orders</h1>
+    <h1 class="w3-xxlarge">Stock</h1>
   </div>
 </header>
 
@@ -37,49 +37,88 @@
   <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
-
+      <div class="container">
+        <form action="add/insertstock.php" method="POST" enctype="multipart/form-data">
+          <div class="row">
+            <div class="col-25">
+              <label for="pname">Product Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="pname" name="pname" placeholder="Product Name...">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="quantity">Quantity</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="quantity" name="quantity" placeholder="Quantity">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="image">Image</label>
+            </div>
+            <div class="col-75">
+              <input type="file" name="image">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="packages">Packages</label>
+            </div>
+            <div class="col-75">
+              <select id="packages" name="packages">
+                <option value="vegetable">Vegetable Package</option>
+                <option value="ambient">Ambient Package</option>
+                <option value="household">Household Items Packages</option>
+              </select>
+            </div>
+         </div>
+          <div class="row">
+            <input type="submit" name="upload" value="Submit">
+          </div>
+       </form>
+      </div>
+   </div>
 </div>
 
-<script>
-// Get the modal
-var modal = document.getElementById("myModal");
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+    // When the user clicks the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 
   <table class="styled-table">
       <thead>
           <tr>
               <th>ID</th>
-              <th>First Name</th>
-              <th>Last Name</th>
-              <th>Phone Number</th>
-              <th>Email</th>
+              <th>Product Name</th>
+              <th>Quantity</th>
+              <th>Image</th>
               <th>Packages</th>
-              <th>Observation</th>
           </tr>
       </thead>
       <tbody>
@@ -87,36 +126,24 @@ window.onclick = function(event) {
             /* Attempt MySQL server connection. Assuming you are running MySQL
             server with default setting (user 'root' with no password) */
             $link = mysqli_connect("localhost", "root", "", "project_database");
-            
-            // Check connection
-            if($link === false){
-                die("ERROR: Could not connect. " . mysqli_connect_error());
-            }
-            
-            $sql = "SELECT id, first_name, last_name, phonenumber, email, packages, observation FROM orders";
-            $result = $link-> query($sql);
+            $sql = "SELECT id, pname, quantity, image, packages FROM stock";
+            $result = mysqli_query($link, $sql);
 
-            if($result-> num_rows > 0){
-              while ($row = $result-> fetch_assoc()) {
-                echo "<tr><td>".$row["id"]."</td><td>".$row["first_name"]."</td><td>".$row["last_name"]."</td><td>".$row["phonenumber"]."</td><td>".$row["email"]."</td><td>".$row["packages"]."</td><td>".$row["observation"]."</td></tr>";
+              while ($row = mysqli_fetch_array($result)) {
+                echo "<tr><td>".$row["id"]."</td>";
+                echo "<td>".$row["pname"]."</td>";
+                echo "<td>".$row["quantity"]."</td>";
+                echo "<td><img src='images/".$row["image"]."' width= height="800"</td>";
+                echo "<td>".$row["packages"]."</td></tr>";
               }
-              echo "</tbody>";
-            }
-            else {
-              echo "0 Result";
-            }
-            $link-> close();
-
           ?>
       </tbody>
   </table>
-    
-  
 </div>
 
 <!-- Footer -->
 <footer class="w3-center w3-light-grey w3-padding-32">
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+<p>High Wycombe Community Fridge</p>
 </footer>
 
 </body>
