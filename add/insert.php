@@ -19,7 +19,7 @@ $observation = mysqli_real_escape_string($link, $_REQUEST['observation']);
 // Attempt insert query execution
 $sql = "INSERT INTO orders (first_name, last_name, phonenumber, email, packages, observation) VALUES ('$first_name', '$last_name', '$phonenumber', '$email', '$packages', '$observation')";
 if(mysqli_query($link, $sql)){
-    header('location: selection.php');
+    header('location: ../selection.php');
 } else{
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
 }
