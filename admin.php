@@ -12,7 +12,7 @@
     <a href="admin.php" class="w3-bar-item w3-button">Community Fridge Admin Page</a>
     <!-- Right-sided navbar links. Hide them on small screens -->
     <div class="w3-right w3-hide-small">
-      <a href="stock.php" class="w3-bar-item w3-button">Stock</a>
+      <a href="admin/stock.php" class="w3-bar-item w3-button">Stock</a>
       <a href="users.php" class="w3-bar-item w3-button">Users</a>
       <a href="#orders" class="w3-bar-item w3-button">Orders</a>
     </div>
@@ -38,6 +38,7 @@
               <th>Email</th>
               <th>Packages</th>
               <th>Observation</th>
+              <th>Delete</th>
           </tr>
       </thead>
       <tbody>
@@ -56,7 +57,7 @@
 
             if($result-> num_rows > 0){
               while ($row = $result-> fetch_assoc()) {
-                echo "<tr><td>".$row["id"]."</td><td>".$row["first_name"]."</td><td>".$row["last_name"]."</td><td>".$row["phonenumber"]."</td><td>".$row["email"]."</td><td>".$row["packages"]."</td><td>".$row["observation"]."</td></tr>";
+                echo "<tr><td>".$row["id"]."</td><td>".$row["first_name"]."</td><td>".$row["last_name"]."</td><td>".$row["phonenumber"]."</td><td>".$row["email"]."</td><td>".$row["packages"]."</td><td>".$row["observation"]."</td><td><form action='function/delete.php' method='post'><button name='delete' value='".$row["id"]."'>Delete</button></form></td></tr>";
               }
               echo "</tbody>";
             }

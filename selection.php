@@ -30,7 +30,7 @@
 <div class="w3-content" style="max-width:1100px">
 
     <div class="container">
-  <form action="add/insert.php" method="POST">
+  <form action="function/insert.php" method="POST">
     <div class="row">
       <div class="col-25">
         <label for="fname">First Name</label>
