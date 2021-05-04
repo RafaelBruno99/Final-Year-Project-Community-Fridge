@@ -5,7 +5,9 @@
   </head>
 
   <body>
+    
     <div class="hero">
+    <h1>Community Fridge Login & Registration</h1>
       <div class="form-box">
         <div class="button-box">
           <div id="btn"></div>
