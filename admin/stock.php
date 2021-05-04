@@ -120,6 +120,8 @@
               <th>Package</th>
               <th>Image</th>
               <th>Delete</th>
+              <th>Minus(-)</th>
+              <th>Plus(+)</th>
           </tr>
       </thead>
       <tbody>
@@ -136,7 +138,9 @@
                 echo "<td>".$row["quantity"]."</td>";
                 echo "<td>".$row["packages"]."</td>";
                 echo "<td><img src='../images/".$row["image"]."' width='150' length='200'</td>";
-                echo "<td><form action='../function/delete.php' method='post'><button name='deletestock' value='".$row["id"]."'>Delete</button></form></td></tr>";
+                echo "<td><form action='../function/delete.php' method='post'><button name='deletestock' value='".$row["id"]."'>Delete</button></form></td>";
+                echo "<td><form action='../function/updatestock.php' method='post'><button name='minus' value='".$row["id"]."'>-1</button></form></td>";
+                echo "<td><form action='../function/updatestock.php' method='post'><button name='plus' value='".$row["id"]."'>+1</button></form></td></tr>";
               }
           ?>
       </tbody>
