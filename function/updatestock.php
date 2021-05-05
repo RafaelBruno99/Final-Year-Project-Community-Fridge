@@ -18,7 +18,7 @@
     }
 
     if (isset($_POST['plus'])) {
-        $target = $_POST['minus'];
+        $target = $_POST['plus'];
 
         $link = mysqli_connect("localhost","root","","project_database");
 
