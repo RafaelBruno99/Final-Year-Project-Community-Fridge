@@ -4,13 +4,31 @@
 
         $link = mysqli_connect("localhost","root","","project_database");
 
-        $sql = "UPDATE FROM orders  WHERE id = '$target'";
+        $sql = "UPDATE FROM stock  SET quantity = quantity - 1 WHERE id = '$target'";
         $data = mysqli_query($link, $sql);
 
         if ($data) {
             echo "data been removed";
 
-            header("location: ../admin.php");
+            header("location: stock.php");
+        }
+        else {
+            echo "failed to delete data";
+        }
+    }
+
+    if (isset($_POST['plus'])) {
+        $target = $_POST['minus'];
+
+        $link = mysqli_connect("localhost","root","","project_database");
+
+        $sql = "UPDATE FROM stock  SET quantity = quantity + 1 WHERE id = '$target'";
+        $data = mysqli_query($link, $sql);
+
+        if ($data) {
+            echo "data been removed";
+
+            header("location: stock.php");
         }
         else {
             echo "failed to delete data";
