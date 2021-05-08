@@ -4,13 +4,13 @@
 
         $link = mysqli_connect("localhost","root","","project_database");
 
-        $sql = "UPDATE FROM stock  SET quantity = quantity - 1 WHERE id = '$target'";
+        $sql = "UPDATE stock  SET quantity = quantity - 1 WHERE id = '$target'";
         $data = mysqli_query($link, $sql);
 
         if ($data) {
             echo "data been removed";
 
-            header("location: stock.php");
+            header("location: ../admin/stock.php");
         }
         else {
             echo "failed to delete data";
@@ -22,13 +22,13 @@
 
         $link = mysqli_connect("localhost","root","","project_database");
 
-        $sql = "UPDATE FROM stock  SET quantity = quantity + 1 WHERE id = '$target'";
+        $sql = "UPDATE stock  SET quantity = quantity + 1 WHERE id = '$target'";
         $data = mysqli_query($link, $sql);
 
         if ($data) {
             echo "data been removed";
 
-            header("location: stock.php");
+            header("location: ../admin/stock.php");
         }
         else {
             echo "failed to delete data";
